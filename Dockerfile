@@ -13,6 +13,6 @@ COPY run_pipeline.pl $HOME/
 COPY start_tassel.pl $HOME/
 COPY tassel.sh $HOME/
 COPY sTASSEL.jar $HOME/
-ADD lib $HOME/lib
+ADD lib $HOME/lib/
 
 RUN chmod +x $HOME/tassel.sh
