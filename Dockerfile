@@ -8,6 +8,6 @@ ENV HOME=/var/tmp
 
 RUN chmod -R 777 /var/tmp
 
-COPY ./* $HOME/
+COPY ./ $HOME/
 
 RUN chmod +x $HOME/tassel.sh
