@@ -8,6 +8,11 @@ ENV HOME=/var/tmp
 
 RUN chmod -R 777 /var/tmp
 
-COPY ./ $HOME/
+COPY run_anything.pl $HOME/
+COPY run_pipeline.pl $HOME/
+COPY start_tassel.pl $HOME/
+COPY tassel.sh $HOME/
+COPY sTASSEL.jar $HOME/
+COPY lib/ $HOME/
 
 RUN chmod +x $HOME/tassel.sh
