@@ -5,7 +5,7 @@ RUN yum install perl -y
 RUN yum install java -y 
 
 ENV HOME=/var/tmp
-
+RUN mkdir /var/tmp/lib
 RUN chmod -R 777 /var/tmp
 
 COPY run_anything.pl $HOME/
@@ -13,6 +13,6 @@ COPY run_pipeline.pl $HOME/
 COPY start_tassel.pl $HOME/
 COPY tassel.sh $HOME/
 COPY sTASSEL.jar $HOME/
-ADD lib $HOME/
+ADD lib $HOME/lib
 
 RUN chmod +x $HOME/tassel.sh
