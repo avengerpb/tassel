@@ -8,7 +8,7 @@ COPY run_pipeline.pl $HOME/
 COPY start_tassel.pl $HOME/
 COPY tassel.sh $HOME/
 COPY sTASSEL.jar $HOME/
-
+WORKDIR $HOME
 RUN apt-get update &&\
  	apt-get install perl -y &&\
  	apt-get install default-jre -y &&\
