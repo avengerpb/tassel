@@ -5,7 +5,7 @@ ADD lib $HOME/lib/
 
 COPY run_anything.pl $HOME/run_anything1.pl
 COPY run_pipeline.pl $HOME/run_pipeline1.pl
-COPY start_tassel.pl $HOME/start_tasse1l.pl
+COPY start_tassel.pl $HOME/start_tassel1.pl
 COPY tassel.sh $HOME/
 COPY sTASSEL.jar $HOME/
 
