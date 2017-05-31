@@ -11,7 +11,7 @@ COPY sTASSEL.jar $HOME/
 
 RUN apt-get update &&\
  	apt-get install perl -y &&\
- 	apt-get install java -y &&\
+ 	apt-get install default-jre -y &&\
  	apt-get install libpar-packer-perl -y && \
  	pp -o run_pipeline.pl run_pipeline1.pl && \
  	pp -o run_anything.pl run_anything1.pl && \
