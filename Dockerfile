@@ -1,18 +1,18 @@
 FROM centos
-RUN yum update
 
-RUN yum install perl -y
-RUN yum install java -y 
 
 ENV HOME=/var/tmp
-RUN mkdir /var/tmp/lib
-RUN chmod -R 777 /var/tmp
+ADD lib $HOME/lib/
 
 COPY run_anything.pl $HOME/
 COPY run_pipeline.pl $HOME/
 COPY start_tassel.pl $HOME/
 COPY tassel.sh $HOME/
 COPY sTASSEL.jar $HOME/
-ADD lib $HOME/lib/
 
-RUN chmod +x $HOME/tassel.sh
+RUN yum update &&\
+ 	yum install perl -y &&\
+ 	yum install java -y &&\
+ 	mkdir /var/tmp/lib &&\
+ 	chmod -R 777 /var/tmp &&\
+ 	chmod +x $HOME/tassel.sh &&\
