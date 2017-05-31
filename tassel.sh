@@ -31,7 +31,7 @@ fi
 
 if [[ $analyseType == ld ]] 
 then
- /var/tmp/run_pipeline.pl $* >> $log1 2>&1
+ /var/tmp/run_pipeline $* >> $log1 2>&1
 fi
 
 
