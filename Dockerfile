@@ -19,7 +19,6 @@ RUN apt-get update &&\
  	rm start_tassel1.pl && \
  	rm run_pipeline1.pl && \
  	rm run_anything1.pl && \
- 	mkdir /var/tmp/lib &&\
  	chmod -R 777 /var/tmp &&\
  	chmod +x $HOME/tassel.sh &&\
  	apt-get purge libpar-packer-perl -y && \
