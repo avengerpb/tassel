@@ -1,5 +1,5 @@
 
-FROM alpine
+FROM anapsix/alpine-java
 
 ENV HOME=/var/tmp
 WORKDIR $HOME
@@ -12,6 +12,6 @@ COPY tassel.sh $HOME/
 COPY sTASSEL.jar $HOME/
 
 RUN apk add --update perl && rm -rf /var/cache/apk/* &&\
-    apk --update add openjdk7-jre  &&\
+    apk add --update bash &&\
     chmod -R 777 /var/tmp &&\
     chmod +x $HOME/tassel.sh
