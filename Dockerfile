@@ -20,6 +20,7 @@ RUN apt-get update &&\
  	rm run_pipeline1.pl && \
  	rm run_anything1.pl && \
  	chmod -R 777 /var/tmp &&\
+ 	chmod -R 777 $HOME/lib/ &&\
  	chmod +x $HOME/tassel.sh &&\
  	apt-get purge libpar-packer-perl -y && \
  	apt-get autoremove -y 
